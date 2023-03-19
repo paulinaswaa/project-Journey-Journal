@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="backendstyle1.css">
+    <script src="https://kit.fontawesome.com/a93276c359.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+    </script>
+    <title>Statistics</title>
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+
+</head>
+<body>
+    <div class="nav-items">
+        <a href="hm1.html">Journey Journal</a>
+        <a href="actualuser.html" class="profile"><i class="fa-regular fa-user"></i> <span>User</span></a>
+        <a href="login.html" class="login"><i class="fa-solid fa-arrow-right-from-bracket"></i> <span>Logout</span></a>
+    </div>
+    <div class="main-container">
+        <div class="left-menu">
+            <div class="logo">
+                <img src="flightcolor.png" alt="">
+                <span><a href="">Journey <br> Journal</a> </span>
+            </div>
+            <ul>
+                <li class="sidebar-item"><a class="sidebar-link" href="backedn1.html"><i class="fa-solid fa-house"></i> Home </a>
+                </li>
+                <li class="sidebar-item"><a class="sidebar-link" href="users.html"><i class="fa-solid fa-user"></i> Users </a>
+                </li>
+                <li class="sidebar-item"><a class="sidebar-link" href="posts.html"><i class="fa-solid fa-file"></i> Posts </a>
+                </li>
+        
+                <li class="sidebar-item"><a href="statistics.html"><i class="fa-solid fa-chart-line"></i> Statistics </a></li>
+               
+                
+            </ul>
+        </div>
+        <!-- Right Content Goes here -->
+        <div class="right-content">
+            
+        <div class="wrapper">
+            <h1>Statistics</h1><br>
+            <div class="row">
+                
+                <div class="chart"><h3>Cooperation</h3><canvas id="myChart"></canvas></div>
+                
+                <div class="chart"><h3>Views in 2022</h3><canvas id="lineChart"></canvas> </div>
+                <div class="chart"><h3>New newsletter readers in 2022</h3><canvas id="barChart"></canvas></div>
+                
+            </div>
+            <div class="tabele-s">
+            <div class="tabela1">
+                <table class="posts">
+                    <tr>
+                        <th>Year</th>
+                        <th>Views</th>
+  
+                    </tr>
+                    <tr>
+                        <td>2023<br>
+                            </td>
+                        <td>560</td>
+
+                    </tr>
+                    <tr>
+                        <td>2022<br>
+                            </td>
+                        <td>560</td>
+
+                    </tr>
+                    <tr>
+                        <td>2021<br>
+                            </td>
+                        <td>560</td>
+
+                    </tr>
+                    <tr>
+                        <td>2022<br>
+                            </td>
+                        <td>560</td>
+
+                    </tr>
+              
+
+
+
+                    
+                </table>
+            </div>
+
+            <div class="tabela1">
+                <table class="posts">
+                    <tr>
+                        <th>Year</th>
+                        <th>Earnings</th>
+  
+                    </tr>
+                    <tr>
+                        <td>2023<br>
+                            </td>
+                        <td>100$</td>
+
+                    </tr>
+                    <tr>
+                        <td>2022<br>
+                            </td>
+                        <td>120$</td>
+
+                    </tr>
+                    <tr>
+                        <td>2021<br>
+                            </td>
+                        <td>960$</td>
+
+                    </tr>
+                    <tr>
+                        <td>2022<br>
+                            </td>
+                        <td>700$</td>
+
+                    </tr>
+              
+                </table>
+            </div>
+            <div class="tabela1">
+                <table class="posts">
+                    <tr>
+                        <th>Year</th>
+                        <th>Newsletter</th>
+  
+                    </tr>
+                    <tr>
+                        <td>2023<br>
+                            </td>
+                        <td>+19</td>
+
+                    </tr>
+                    <tr>
+                        <td>2022<br>
+                            </td>
+                        <td>+234</td>
+
+                    </tr>
+                    <tr>
+                        <td>2021<br>
+                            </td>
+                        <td>+106</td>
+
+                    </tr>
+                    <tr>
+                        <td>2022<br>
+                            </td>
+                        <td>+91</td>
+
+                    </tr>
+              
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>
+<script>
+    var xyValues = [
+      {x:50, y:5},
+      {x:60, y:11},
+      {x:70, y:9},
+      {x:80, y:7},
+      {x:90, y:9},
+      {x:100, y:9},
+      {x:110, y:10},
+      {x:120, y:11},
+      {x:130, y:14},
+      {x:140, y:14},
+      {x:150, y:15}
+    ];
+    
+    new Chart("myChart", {
+      type: "scatter",
+      data: {
+        datasets: [{
+          pointRadius: 3,
+          pointBackgroundColor: "rgb(90, 1, 27)",
+          data: xyValues
+        }]
+      },
+      options: {
+        legend: {display: false},
+        scales: {
+          xAxes: [{ticks: {min: 40, max:160}}],
+          yAxes: [{ticks: {min: 5, max:15}}],
+        }
+      }
+    });
+    </script>
+    <script>
+       
+        
+        new Chart("lineChart", {
+          type: "line",
+          data: {
+             datasets: [{
+                data: [700, 750, 740, 580, 660, 780, 870, 830, 790, 710, 650, 900],
+                borderColor: '#1A5276',
+                backgroundColor: '#5499C7 ',
+            }],
+            labels: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']
+  },
+          options: {
+            legend: {display: false},
+            scales: {
+              xAxes: [{ticks: {min: 0, max:13}}],
+              yAxes: [{ticks: {min: 500, max:1000}}],
+            }
+          }
+        });
+        </script>
+        <script>
+       
+        
+            new Chart("barChart", {
+              type: "bar",
+              data: {
+                 datasets: [{
+                    data: [610, 640, 800, 700, 705, 860, 890, 880, 890, 690, 650, 740],
+                    borderColor: '#5D6D7E',
+                    backgroundColor: '#5D6D7E ',
+                }],
+                labels: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']
+      },
+              options: {
+                legend: {display: false},
+                scales: {
+                  xAxes: [{ticks: {min: 0, max:13}}],
+                  yAxes: [{ticks: {min: 500, max:1000}}],
+                }
+              }
+            });
+            </script>
+
+            
+
+    </div>
+    
+</body>
+</html>

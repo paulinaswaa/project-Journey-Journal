@@ -1,0 +1,78 @@
+body {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+		url("paris-gca95a1fe2_1920.jpg");
+}
+form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 50%;
+	margin: 0 auto;
+	padding: 20px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	background-color: rgba(255, 255, 255, 0.6);
+}
+.login-form {
+	font-family: serif;
+}
+label {
+	font-size: 16px;
+	margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="password"] {
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	box-sizing: border-box;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+
+input[type="submit"] {
+	width: 100%;
+	background-color: #795f7e;
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+input[type="submit"]:hover {
+	background-color: #45a049;
+}
+
+a {
+	color: #333;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+label {
+	font-family: "Roboto";
+	color: #2b272b;
+}
+h1 {
+	text-align: center;
+	font-size: 50px;
+	color: white;
+	font-family: Satisfy;
+}
+
+h1:hover {
+	transform: scale(1.01);
+	text-decoration: solid;
+}
+
+@media (max-width: 700px) {
+	form {
+		width: 70%;
+		margin: auto;
+	}
+}

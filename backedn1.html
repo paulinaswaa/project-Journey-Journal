@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="backendstyle1.css">
+    <script src="https://kit.fontawesome.com/a93276c359.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <title>Dashboard</title>
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+
+</head>
+<body>
+    <div class="nav-items">
+        <a href="hm1.html">Journey Journal</a>
+        <a href="actualuser.html" class="profile"><i class="fa-regular fa-user"></i> <span>User</span></a>
+        <a href="login.html" class="login">
+            <i class="fa-solid fa-arrow-right-from-bracket"></i><span>Logout</span></a>
+    </div>
+    <div class="main-container">
+        <div class="left-menu">
+            <div class="logo">
+                <img src="flightcolor.png" alt="">
+                <span><a href="">Journey <br> Journal</a> </span>
+            </div>
+            <ul>
+                <li class="sidebar-item"><a class="sidebar-link" href="backedn1.html"><i class="fa-solid fa-house"></i> Home </a>
+                </li>
+                <li class="sidebar-item"><a class="sidebar-link" href="users.html"><i class="fa-solid fa-user"></i> Users </a>
+                </li>
+                <li class="sidebar-item"><a class="sidebar-link" href="posts.html"><i class="fa-solid fa-file"></i> Posts </a>
+                </li>
+        
+                <li class="sidebar-item"><a href="statistics.html"><i class="fa-solid fa-chart-line"></i> Statistics </a></li>
+               
+                
+            </ul>
+        </div>
+        <!-- Right Content Goes here -->
+        <div class="right-content">
+            <div class="wrapper">
+                <h1>Dashborad
+                </h1><br>
+                <div class="row">
+                    
+                    <div class="chart-s"><h3>Current website traffic</h3><canvas id="lineChart"></canvas> </div>
+                    
+                </div>
+            
+        </div>
+    </div>
+    
+        <script>
+           
+            
+            new Chart("lineChart", {
+              type: "line",
+              data: {
+                 datasets: [{
+                    data: [700, 750, 740, 580, 660, 780, 870, 830, 790, 710, 650, 900, 600,550,540,800,770, 600, 650, 880, 850, 880, 900, 890],
+                    borderColor: '#1A5276',
+                    backgroundColor: '#5499C7 ',
+                }],
+                labels: ['3am', '4am', '5am', '6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm',
+                '3pm', '4pm', '5pm', '6pm', '7pm', '8pm', '9pm', '10pm','11pm', '12am', '1am', '2am' ]
+      },
+              options: {
+                legend: {display: false},
+                scales: {
+                  xAxes: [{ticks: {min: 0, max:13}}],
+                  yAxes: [{ticks: {min: 500, max:1000}}],
+                }
+              }
+            });
+            </script>
+            
+    
+        </div>
+    
+</body>
+</html>

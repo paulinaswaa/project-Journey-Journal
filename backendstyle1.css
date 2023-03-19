@@ -1,0 +1,437 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+
+* {
+	font-family: "Poppins", "sans-serif";
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.main-container {
+	width: 100%;
+	height: 100vh;
+	background-color: white;
+	display: flex;
+}
+
+.left-menu {
+	background: lightgrey;
+	position: relative;
+	width: 4.3rem;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	transition: all 0.4s ease;
+}
+
+.left-menu:hover {
+	width: 13rem;
+}
+
+.left-menu ul li a {
+	display: flex;
+}
+
+.logo {
+	color: #706a71;
+	width: 40px;
+	position: relative;
+	top: 1rem;
+	left: 0.5rem;
+	display: flex;
+	margin: 10px;
+	justify-content: center;
+	align-items: center;
+}
+
+.logo img {
+	width: 100%;
+	z-index: 100;
+	position: absolute;
+}
+
+.logo span {
+	font-weight: bold;
+	padding: 10px;
+	font-size: 18px;
+	text-transform: uppercase;
+}
+
+.logo a {
+	position: relative;
+	left: 180px;
+	color: #706a71;
+	font-size: 19.2px;
+	display: table;
+	text-align: left;
+	width: 312px;
+	text-decoration: none;
+	padding: 8.7px;
+	font-family: "Poppins", "sans-serif";
+}
+
+.left-menu ul {
+	margin-top: 2rem;
+	margin-left: 1.5rem;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+ul li {
+	font-family: "Poppins", sans-serif;
+	list-style: none;
+	margin-bottom: 1rem;
+	align-items: center;
+	transition: all 0.3s linear;
+}
+
+ul li a {
+	padding: 0.5rem;
+	color: black;
+	text-decoration: none;
+}
+
+ul li a i {
+	text-decoration: none;
+	color: #675d68;
+	font-size: 1.4rem;
+	cursor: pointer;
+	transition: all 0.3s linear;
+	margin-right: 1.2rem;
+}
+
+.sidebar-item i {
+	width: 20px;
+	height: 20px;
+	text-align: center;
+}
+
+#settings {
+	position: absolute;
+	bottom: 1rem;
+}
+
+.left-menu ul li:hover .fa-solid,
+.left-menu ul li:hover a {
+	font-weight: bold;
+	color: black;
+}
+
+.nav-items {
+	position: sticky;
+
+	flex-direction: row;
+	justify-content: space-between;
+	top: 0;
+	height: 60px;
+	line-height: 60px;
+	background-color: lightgray;
+	text-align: center;
+	z-index: 10;
+	text-align: right;
+}
+
+.nav-items {
+	text-align: right;
+	display: block;
+}
+.nav-items a {
+	font-family: "Poppins", sans-serif;
+	font-weight: 300;
+
+	list-style: none;
+	margin-bottom: 1rem;
+	align-items: center;
+	transition: all 0.3s linear;
+	padding: 0 30px;
+	text-decoration: none;
+
+	font-weight: bold;
+	color: #5c565e;
+}
+.nav-items a:hover {
+	font-weight: bolder;
+	color: rgb(0, 0, 0);
+}
+
+/* table */
+
+table.orders,
+table.posts {
+	border: 1px solid #bbb;
+	border-collapse: collapse;
+	font-size: 14px;
+	color: #000;
+	width: 100%;
+}
+tr:nth-child(2n) {
+	background-color: #eee;
+}
+td:nth-child(4n) {
+	width: 12.6%;
+}
+
+table.posts th,
+table.posts td {
+	border: 1px solid #bbb;
+	padding: 10px;
+}
+
+table.posts td:first-child,
+table.posts th:first-child {
+	border-left: none;
+	width: 70%;
+}
+
+table.posts tr:last-child {
+	border-bottom: none;
+}
+
+/* table.posts th:nth-child(2), table.posts th:nth-child(3){
+    width: 20%;
+} */
+
+.wrapper {
+	justify-items: center;
+	width: 1190px;
+	margin-top: 5%;
+	margin-left: 9%;
+	margin-right: 1%;
+}
+
+/* reports */
+.chart {
+	width: 30%;
+	/* height: 400px; */
+	margin: 10px;
+	padding: 10px;
+	border: 3px solid #ddd;
+	display: inline-block;
+}
+
+.tabele-s {
+	display: flex;
+}
+
+.tabela1 {
+	width: 30%;
+	/* height: 400px; */
+	margin: 13px;
+	padding: 13px;
+
+	display: inline-block;
+}
+.edit {
+	width: 60px;
+	border: 2.2px solid rgb(6, 8, 149);
+
+	color: black;
+}
+.delete {
+	width: 60px;
+	border: 2.2px solid rgb(132, 9, 9);
+	color: black;
+}
+.edit:hover {
+	color: white;
+	background-color: rgb(6, 8, 149);
+	transition: all 0.5s ease-in;
+}
+
+.delete:hover {
+	color: white;
+	background-color: rgb(132, 9, 9);
+	transition: all 0.5s ease-in;
+}
+.edit1 {
+	width: 100%;
+	width: 110px;
+	border: 2.2px solid rgb(6, 8, 149);
+
+	color: black;
+}
+.edit1:hover {
+	color: white;
+	background-color: rgb(6, 8, 149);
+	transition: all 0.5s ease-in;
+}
+
+.profile-photo img {
+	width: 200px;
+	height: 300px;
+	border: #bbb;
+}
+.row1 {
+	display: flex;
+}
+.profile-info {
+	width: 60%;
+	font-family: sans-serif;
+	font-size: 12pt;
+	display: flex;
+	flex-direction: column;
+	margin: 3%;
+	padding: 5%;
+}
+.btn-edit {
+	width: 14%;
+	margin-right: 1%;
+
+	text-align: center;
+
+	border: 2.2px solid rgb(17, 85, 15);
+}
+.btn-password {
+	width: 14%;
+	text-align: center;
+	margin-right: 1%;
+
+	border: 2.2px solid rgb(6, 8, 149);
+}
+.btn-delete {
+	width: 14%;
+	text-align: center;
+	margin-right: 1%;
+
+	border: 2.2px solid rgb(132, 9, 9);
+}
+.profile-info a {
+	font-family: sans-serif;
+	color: #000;
+	text-decoration: none;
+}
+
+.btn-edit:hover {
+	color: white;
+	background-color: rgb(17, 85, 15);
+	transition: all 0.5s ease-in;
+}
+.btn-password:hover {
+	color: white;
+	background-color: rgb(6, 8, 149);
+	transition: all 0.5s ease-in;
+}
+
+.btn-delete:hover {
+	color: white;
+	background-color: rgb(132, 9, 9);
+	transition: all 0.5s ease-in;
+}
+
+.btn {
+	display: flex;
+
+	align-items: center;
+}
+.profile-info h2 {
+	font-size: 24pt;
+}
+
+.wrapper-s {
+	width: 1190px;
+	margin-top: 5%;
+	margin-left: 9%;
+	margin-right: 14%;
+}
+
+.chart-s {
+	width: 90%;
+}
+
+@media (max-width: 1350px) {
+	.main-container {
+		height: 100vh;
+		background-color: white;
+		display: flex;
+	}
+	.wrapper {
+		justify-items: center;
+		width: 900px;
+		margin-top: 5%;
+		margin-left: 9%;
+		margin-right: 1%;
+	}
+	.wrapper-s {
+		width: 1000px;
+		margin-top: 5%;
+		margin-left: 9%;
+		margin-right: 5%;
+	}
+	
+	.left-menu {
+		background: lightgrey;
+		position: relative;
+		width: 4.3rem;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		overflow: hidden;
+		
+		transition: all 0.4s ease;
+	}
+	
+	.left-menu:hover {
+		width: 13rem;
+	}
+	.righ-content{
+		width: 60%;
+	}
+	.left-menu ul li a {
+		display: flex;
+	}
+	
+	.left-menu ul li a {
+		display: flex;
+		
+	}
+	table.posts{
+		width: 120%;
+	}
+}
+
+@media (max-width: 700px) {
+	.main-container {
+		
+		height: 100vh;
+		background-color: white;
+		display: flex;
+	}
+	.wrapper {
+		justify-items: center;
+		width: 100px;
+		margin-top: 5%;
+		margin-left: 9%;
+		margin-right: 1%;
+	}
+	.left-menu {
+		background: lightgrey;
+		position: relative;
+		width: 4.3rem;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		overflow: hidden;
+		transition: all 0.4s ease;
+	}
+	
+	.left-menu:hover {
+		width: 13rem;
+	}
+	
+	.left-menu ul li a {
+		display: flex;
+	}
+	
+	.left-menu ul li a {
+		display: flex;
+		
+	}
+	table{
+		width: 70%;
+	}
+	.chart-s{
+		width: 40%;
+	}
+}
